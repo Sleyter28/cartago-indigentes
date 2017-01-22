@@ -6,16 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartago sin indigentes</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <script type="text/javascript" src="/js/navbar.js"></script>
 </head>
 
 <body>
     <header>
-
         <nav class="navbar">
-            <div class="nav-header">
-                <!---->
-            </div>
             <ul class="topnav">
                 <li class="active left"><a href="#about">Cartago sin Indigentes</a></li>
                 <li><a href="#trabaje">Trabaje con nosotros</a></li>
@@ -66,35 +62,37 @@
                         <h2 class="section-heading">Nuestro trabajo</h2>
                         <h3>Organización</h3>
                         <p>Es generar una esperanza a las personas que viven en las calles en la ciudad de Cartago</p>
-                        <div class="tb1">
-                            <table>
-                                <tr>
-                                    <th>Organización</th>
-                                </tr>
-                                <tr>
-                                    <td>Grupo 1</td>
-                                </tr>
-                                <tr>
-                                    <td>Grupo 2</td>
-                                </tr>
-                            </table>
-                        </div>
+                        <div class="row">
+                            <div class="col-md4">
+                                <table>
+                                    <tr>
+                                        <th>Organización</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Grupo 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grupo 2</td>
+                                    </tr>
+                                </table>
+                            </div>
 
-                        <div class="tb2">
-                            <table>
-                                <tr>
-                                    <th>Grupo de Trabajo</th>
-                                    <th>Resumen</th>
-                                </tr>
-                                <tr>
-                                    <td>Grupo de trabajo 1</td>
-                                    <td>Trabaja con los indigentes de la línea del tren.</td>
-                                </tr>
-                                <tr>
-                                    <td>Grupo de trabajo 2</td>
-                                    <td>Trabaja con los indigentes de la zona del parque.</td>
-                                </tr>
-                            </table>
+                            <div class="col-md8">
+                                <table>
+                                    <tr>
+                                        <th>Grupo de Trabajo</th>
+                                        <th>Resumen</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Grupo de trabajo 1</td>
+                                        <td>Trabaja con los indigentes de la línea del tren.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grupo de trabajo 2</td>
+                                        <td>Trabaja con los indigentes de la zona del parque.</td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -109,15 +107,17 @@
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
+                        <h2 class="section-heading">Trabaje con nosotros</h2>
                         <form action="">
                             <h4>Nombre:</h4>
-                            <input type="text" name="name" placeholder="nombre">
+                            <input type="text" name="name" placeholder="Nombre">
                             <h4>Correo:</h4>
-                            <input type="email" name="correo" placeholder="correo">
+                            <input type="email" name="correo" placeholder="Email">
                             <h4>Teléfono:</h4>
                             <input type="tel" name="telefono" placeholder="teléfono">
                             <h4>Motivación:</h4>
-                            <input type="text" name="motivacion" placeholder="Motivación">
+                            <textarea name="message" placeholder="Motivación" rows="10" cols="30">
+                            </textarea>
                             <h4>Grupos de Interés:</h4>
                             <input type="checkbox" name="ckbgruop" value="cb1">Grupo 1 <br>
                             <input type="checkbox" name="ckbgruop" value="cb2">Grupo 2 <br>
@@ -127,7 +127,7 @@
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
     </header>
 </body>
 
