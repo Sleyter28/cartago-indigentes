@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartago sin indigentes</title>
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="/js/navbar.js"></script>
 </head>
 
 <body>
@@ -19,116 +18,123 @@
                 <li><a href="#quienes">Quiénes somos</a></li>
             </ul>
         </nav>
-
-        <!-- header -->
-        <a name="about"></a>
-        <div class="intro-header">
-            <div class="container">
-                <div class="intro-message">
-                    <h1>Cartago sin Indigentes</h1>
-                    <hr class="intro-divider">
-                    <h3>Gente compartiendo con la gente!</h3>
-                </div>
+    </header>
+    <!-- header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+            <div class="intro-message">
+                <h1>Cartago sin Indigentes</h1>
+                <hr class="intro-divider">
+                <h3>Gente compartiendo con la gente!</h3>
             </div>
         </div>
+    </div>
 
-        <a name="quienes"></a>
-        <div class="content-section-a">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Quiénes somos?</h2>
-                        <h3>Misión:</h3>
-                        <p>Es generar una esperanza a las personas que viven en las calles en la ciudad de Cartago</p>
-                        <h3>Visión:</h3>
-                        <p>Nuestra visión es contar con un lugar para brindarle a las personas indigentes en las calles un hogar y una nueva perspectiva de vida.</p>
-                        <h3>Valores:</h3>
-                        <p>Solidaridad, esfuerzo, alegría, respeto.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--Section de nuestro trabajo-->
-        <a name="nuestro"></a>
-        <div class="content-section-b">
-            <div class="container">
-                <div class="row1">
-                    <div class="col-lg-5 col-sm-6">
-                        <hr class="section-heading-spacer">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Nuestro trabajo</h2>
-                        <h3>Organización</h3>
-                        <p>Es generar una esperanza a las personas que viven en las calles en la ciudad de Cartago</p>
-                        <div class="row">
-                            <div class="col-md4">
-                                <table>
-                                    <tr>
-                                        <th>Organización</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Grupo 1</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grupo 2</td>
-                                    </tr>
-                                </table>
-                            </div>
-
-                            <div class="col-md8">
-                                <table>
-                                    <tr>
-                                        <th>Grupo de Trabajo</th>
-                                        <th>Resumen</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Grupo de trabajo 1</td>
-                                        <td>Trabaja con los indigentes de la línea del tren.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Grupo de trabajo 2</td>
-                                        <td>Trabaja con los indigentes de la zona del parque.</td>
-                                    </tr>
-                                </table>
-                            </div>
+    <a name="quienes"></a>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row" id="secA">
+                <div class="col-lg-5">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Quiénes somos?</h2>
+                    <div class="row">
+                        <div class="sector">
+                            <h3>Misión:</h3>
+                            <p class="lead">Es generar una esperanza a las personas que viven en las calles de la ciudad de Cartago, que están consumidos por algún vicio y fueron aboandonas o decidieron salirse de sus casas, dejando así sus familias, amigos, hasta incluso
+                                trabajos.
+                            </p>
+                            <h3>Visión:</h3>
+                            <p class="lead">Nuestra visión es contar con un lugar para brindarle a las personas indigentes en las calles un hogar y una nueva perspectiva de vida.</p>
+                            <h3>Valores:</h3>
+                            <p class="lead">Solidaridad, esfuerzo, alegría, respeto.</p>
+                        </div>
+                        <div class="imgQuien">
+                            <img src="images/volunteers.jpg" class="img-responsive">
+                            <br>
+                            <br>
+                            <br>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- section de form de trabaje con nosotros-->
-        <a name="trabaje"></a>
-        <div class="content-section-c">
-          <hr class="section-heading-spacer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 col-sm-6">
-                        <div class="clearfix"></div>
-                        <h2 class="section-heading">Trabaje con nosotros</h2>
-                        <form action="">
-                            <h4>Nombre:</h4>
-                            <input type="text" name="name" placeholder="Nombre">
-                            <h4>Correo:</h4>
-                            <input type="email" name="correo" placeholder="Email">
-                            <h4>Teléfono:</h4>
-                            <input type="tel" name="telefono" placeholder="teléfono">
-                            <h4>Motivación:</h4>
-                            <textarea name="message" placeholder="Motivación" rows="10" cols="30">
-                            </textarea>
-                            <h4>Grupos de Interés:</h4>
-                            <input type="checkbox" name="ckbgruop" value="cb1">Grupo 1 <br>
-                            <input type="checkbox" name="ckbgruop" value="cb2">Grupo 2 <br>
-                            <input type="checkbox" name="ckbgruop" value="cb3">Cualquiera <br>
-                            <input type="submit" value="Enviar">
-                        </form>
+    <!--Section de nuestro trabajo-->
+    <a name="nuestro"></a>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Nuestro trabajo</h2>
+                    <div class="row">
+                      <h3>Organización</h3>
+                      <p class="lead">Es generar una esperanza a las personas que viven en las calles en la ciudad de Cartago</p>
+                        <div class="col-md4">
+                            <table>
+                                <tr>
+                                    <th>Organización</th>
+                                </tr>
+                                <tr>
+                                    <td>Grupo 1</td>
+                                </tr>
+                                <tr>
+                                    <td>Grupo 2</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="col-md8">
+                            <table>
+                                <tr>
+                                    <th>Grupo de Trabajo</th>
+                                    <th>Resumen</th>
+                                </tr>
+                                <tr>
+                                    <td>Grupo de trabajo 1</td>
+                                    <td>Trabaja con los indigentes de la línea del tren.</td>
+                                </tr>
+                                <tr>
+                                    <td>Grupo de trabajo 2</td>
+                                    <td>Trabaja con los indigentes de la zona del parque.</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </div>
+
+    <!-- section de form de trabaje con nosotros-->
+    <a name="trabaje"></a>
+    <div class="content-section-c">
+        <hr class="section-heading-spacer">
+        <div class="col-lg-5 col-sm-6">
+            <div class="clearfix"></div>
+            <h2 class="section-heading">Trabaje con nosotros</h2>
+            <form action="">
+                <h4>Nombre:</h4>
+                <input type="text" name="name" placeholder="Nombre">
+                <h4>Correo:</h4>
+                <input type="email" name="correo" placeholder="Email">
+                <h4>Teléfono:</h4>
+                <input type="tel" name="telefono" placeholder="Teléfono">
+                <h4>Motivación:</h4>
+                <textarea rows="10" cols="60" placeholder="Motivación"></textarea>
+                <h4>Grupos de Interés:</h4>
+                <input type="checkbox" name="ckbgruop" value="cb1">Grupo 1 <br>
+                <input type="checkbox" name="ckbgruop" value="cb2">Grupo 2 <br>
+                <input type="checkbox" name="ckbgruop" value="cb3">Cualquiera <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>
