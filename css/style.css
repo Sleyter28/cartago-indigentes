@@ -50,6 +50,8 @@ ul.topnav li a.active {background-color: #00ccff;}
 
 ul.topnav li.left {float: left;}
 
+.active {background-color: #00ccff;}
+
 @media screen and (max-width: 600px){
     ul.topnav li.right,
     ul.topnav li {float: none;}
