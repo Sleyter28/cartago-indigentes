@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos de Trabajo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <script type="text/javascript" src="http://ic-itcr.ac.cr/~gubaldo/proyecto/js/controller.js"></script>
+</head>
+
+<body onload="cargar()">
+    <header>
+        <nav class="navbar">
+            <div class="nav-header">
+                <!---->
+            </div>
+            <ul class="topnav">
+                <li class="active left"><a href="#about">Cartago sin Indigentes</a></li>
+                <li><a href="#quienes">Quiénes somos</a></li>
+                <li><a href="#nuestro">Nuestro trabajo</a></li>
+                <li><a href="#trabaje">Trabaje con nosotros</a></li>
+            </ul>
+        </nav>
+
+        <!-- header -->
+        <a name="about"></a>
+        <!--
+        <div class="intro-header">
+            <div class="container">
+                <div class="intro-message">
+                    <h1>Cartago sin Indigentes</h1>
+                    <hr class="intro-divider">
+                    <h3>Gente compartiendo con la gente!</h3>
+                </div>
+            </div>
+        </div>
+        -->
+        <div class="content-section-a">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Nuevo grupo de trabajo</h2>
+                        <dt><h3>Nombre:</h3></dt>
+                        <dd><input type="text" name="nombre_grupo_trabajo"></dd>
+                        <dt><h3>Resumen:</h3></dt>
+                        <dd><textarea name="resumen_grupo_trabajo"></textarea></dd> 
+                        <dt><h3>Lista de Objetivos:</h3></dt>
+                        <dd><input type="text" name="objetivo_grupo_trabajo"></dd>
+                        <dd><input type="text" name="objetivo_grupo_trabajo"></dd>
+                        <dd><input type="text" name="objetivo_grupo_trabajo"></dd>
+                        <dd><input type="text" name="objetivo_grupo_trabajo"><input type="button" onclick="agregarObjetivo()" value="Agregar objetivo"></dd>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-section-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Editar grupo de trabajo</h2>
+                        <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                        <dd><select id="grupos_trabajo" name="grupos_trabajo" onchange="cargarInput()">
+                            <option selected="true" disabled="true"> Seleccione una opción...</option>
+                        </select></dd>
+                        <dt><h3>Nombre:</h3></dt>
+                        <dd><input type="text" id="nombre_grupo_trabajo" name="nombre_grupo_trabajo"></dd>
+                        <dt><h3>Resumen:</h3></dt>
+                        <dd><textarea id="resumen_grupo_trabajo" name="resumen_grupo_trabajo"></textarea></dd> 
+                        <dt><h3>Lista de Objetivos:</h3></dt>
+                        <div id="lista_de_objetivos">
+                        </div>
+                        <input type="button" onclick="agregarObjetivo" value="Agregar objetivo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Eliminar un grupo de trabajo</h2>
+                        <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                        <dd><select name="grupos_trabajo">
+                            <option>Grupo 1</option>
+                            <option>Grupo 2</option>
+                            <option>Grupo 3</option>
+                        </select></dd>
+                        <input type="button" onclick="EliminarGrupo()" value="Eliminar grupo de trabajo">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </header>
+</body>
+
+</html>

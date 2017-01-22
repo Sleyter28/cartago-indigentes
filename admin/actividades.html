@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-header">
+                <!---->
+            </div>
+            <ul class="topnav">
+                <li class="active left"><a href="#about">Cartago sin Indigentes</a></li>
+                <li><a href="#quienes">Quiénes somos</a></li>
+                <li><a href="#nuestro">Nuestro trabajo</a></li>
+                <li><a href="#trabaje">Trabaje con nosotros</a></li>
+            </ul>
+        </nav>
+
+        <!-- header -->
+        <a name="about"></a>
+        <!--
+        <div class="intro-header">
+            <div class="container">
+                <div class="intro-message">
+                    <h1>Cartago sin Indigentes</h1>
+                    <hr class="intro-divider">
+                    <h3>Gente compartiendo con la gente!</h3>
+                </div>
+            </div>
+        </div>
+                        /* nombre, fecha lugar descripcion, rutaimagen*/
+        -->
+        <div class="content-section-a">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Nueva actividad</h2>
+                        <dt><h3>Título:</h3></dt>
+                        <dd><input type="text" name="titulo_actividad"></dd>
+                        <dt><h3>Fecha:</h3></dt>
+                        <dd><input  type="date" name="fecha_actividad"></input></dd> 
+                        <dt><h3>Lugar:</h3></dt>
+                        <dd><input type="text" name="lugar_actividad"></dd>
+                        <dt><h3>Descripción:</h3></dt>
+                        <dd><textarea  name="descripcion_actividad"></textarea></dd>
+                        <dt><h3>Imagen:</h3></dt>
+                        <dd><input type="file" name="imagen"></dd>
+                        <input type="button" onclick="agregarActividad()">                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-section-a">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Editar actividad</h2>
+                        <dt><h3>Selecione una actividad:</h3></dt>
+                        <dd><select>
+                            <option>Actividad</option>
+                            <option>Actividad</option>
+                            <option>Actividad</option>
+                            <option>Actividad</option>
+                        </select></dd>
+                        <dt><h3>Título:</h3></dt>
+                        <dd><input type="text" name="titulo_actividad"></dd>
+                        <dt><h3>Fecha:</h3></dt>
+                        <dd><input  type="date" name="fecha_actividad"></input></dd> 
+                        <dt><h3>Lugar:</h3></dt>
+                        <dd><input type="text" name="lugar_actividad"></dd>
+                        <dt><h3>Descripción:</h3></dt>
+                        <dd><textarea  name="descripcion_actividad"></textarea></dd>
+                        <dt><h3>Imagen (cambiar):</h3></dt>
+                        <dd><input type="file" name="imagen"></dd>
+                        <input type="button" onclick="editarActividad()">                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-section-b">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-sm-6">
+                        <hr class="section-heading-spacer">
+                        <div class="clearfix"></div>
+                        <h2 class="section-heading">Eliminar un actividad</h2>
+                        <dt><h3>Seleccionar una actividad:</h3></dt>
+                        <dd><select name="grupos_trabajo">
+                            <option>Actividad 1</option>
+                            <option>Actividad 2</option>
+                            <option>Actividad 3</option>
+                        </select></dd>
+                        <input type="button" onclick="EliminarActividad()" value="Eliminar actividad">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </header>
+</body>
+
+</html>
