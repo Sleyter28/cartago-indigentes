@@ -80,7 +80,7 @@ include("database.php");
 				
 				$arraylist = array();
 				$grupo_id= $_GET['grupo'];
-				$sql="SELECT * FROM objetivo where grupoTrabajo_idgrupoTrabajo = $grupo_id;";
+				$sql="SELECT * FROM actividad where grupoTrabajo_idgrupoTrabajo = $grupo_id;";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 				    // output data of each row

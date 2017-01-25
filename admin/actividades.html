@@ -7,9 +7,10 @@
     <title>Actividades</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <script type="text/javascript" src="http://ic-itcr.ac.cr/~gubaldo/proyecto/js/controller.js"></script>
 </head>
 
-<body>
+<body onload="cargar()">
     <header>
         <nav class="navbar">
             <div class="nav-header">
@@ -43,21 +44,25 @@
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
-                        <h2 class="section-heading" id="newAct">Nueva actividad</h2>
-                        <div class="contenedor">
-                            <dt><h3>Título:</h3></dt>
-                            <dd><input type="text" name="titulo_actividad" class="title"></dd>
-                            <dt><h3>Fecha:</h3></dt>
-                            <dd><input type="date" name="fecha_actividad"></input></dd>
-                            <dt><h3>Lugar:</h3></dt>
-                            <dd><input type="text" name="lugar_actividad" class="place"></dd>
-                            <dt><h3>Descripción:</h3></dt>
-                            <dd><textarea name="descripcion_actividad" class="description"></textarea></dd>
-                            <dt><h3>Imagen:</h3></dt>
-                            <dd><input type="file" name="imagen"></dd>
-                            <br>
-                            <input type="button" onclick="agregarActividad()" class="btnAdd" value="Agregar">
-                        </div>
+                        <h2 class="section-heading">Nueva actividad</h2>
+                        <dt><h3>Selecione el grupo que realizará la actividad:</h3></dt>
+                        <dd><select>
+                            <option>Grupo</option>
+                            <option>Grupo</option>
+                            <option>Grupo</option>
+                            <option>Grupo</option>
+                        </select></dd>
+                        <dt><h3>Título:</h3></dt>
+                        <dd><input type="text" name="titulo_actividad"></dd>
+                        <dt><h3>Fecha:</h3></dt>
+                        <dd><input  type="date" name="fecha_actividad"></input></dd> 
+                        <dt><h3>Lugar:</h3></dt>
+                        <dd><input type="text" name="lugar_actividad"></dd>
+                        <dt><h3>Descripción:</h3></dt>
+                        <dd><textarea  name="descripcion_actividad"></textarea></dd>
+                        <dt><h3>Imagen:</h3></dt>
+                        <dd><input type="file" name="imagen"></dd>
+                        <input type="button" onclick="agregarActividad()">                        
                     </div>
                 </div>
             </div>
@@ -70,29 +75,26 @@
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
-                        <h2 class="section-heading" id="newAct">Editar actividad</h2>
-                        <div class="contenedor">
-                            <dt><h3>Selecione una actividad:</h3></dt>
-                            <dd><select>
-                            <option>Actividad</option>
-                            <option>Actividad</option>
-                            <option>Actividad</option>
-                            <option>Actividad</option>
+                        <h2 class="section-heading">Editar actividad</h2>
+                        <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                        <dd><select id="grupos_trabajo" name="grupos_trabajo" onchange="cargarActividades('grupos_trabajo','edit_actividad')">
+                            <option selected="true" disabled="true"> Seleccione una opción...</option>
                         </select></dd>
-                            <dt><h3>Título:</h3></dt>
-                            <dd><input type="text" name="titulo_actividad" class="title"></dd>
-                            <dt><h3>Fecha:</h3></dt>
-                            <dd><input type="date" name="fecha_actividad"></input>
-                            </dd>
-                            <dt><h3>Lugar:</h3></dt>
-                            <dd><input type="text" name="lugar_actividad" class="place"></dd>
-                            <dt><h3>Descripción:</h3></dt>
-                            <dd><textarea name="descripcion_actividad" class="description"></textarea></dd>
-                            <dt><h3>Imagen (cambiar):</h3></dt>
-                            <dd><input type="file" name="imagen"></dd>
-                            <br>
-                            <input type="button" onclick="editarActividad()" class="btnAdd" value="Editar">
-                        </div>
+                        
+                        <dt><h3>Selecione una actividad:</h3></dt>
+                        <dd><select id="edit_actividad">
+                        </select></dd>
+                        <dt><h3>Título:</h3></dt>
+                        <dd><input type="text" name="titulo_actividad"></dd>
+                        <dt><h3>Fecha:</h3></dt>
+                        <dd><input  type="date" name="fecha_actividad"></input></dd> 
+                        <dt><h3>Lugar:</h3></dt>
+                        <dd><input type="text" name="lugar_actividad"></dd>
+                        <dt><h3>Descripción:</h3></dt>
+                        <dd><textarea  name="descripcion_actividad"></textarea></dd>
+                        <dt><h3>Imagen (cambiar):</h3></dt>
+                        <dd><input type="file" name="imagen"></dd>
+                        <input type="button" onclick="editarActividad()">                        
                     </div>
                 </div>
             </div>
@@ -105,22 +107,21 @@
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
-                        <h2 class="section-heading" id="newAct">Eliminar un actividad</h2>
-                        <div class="contenedor">
-                            <dt><h3>Seleccionar una actividad:</h3></dt>
-                            <dd><select name="grupos_trabajo">
-                            <option>Actividad 1</option>
-                            <option>Actividad 2</option>
-                            <option>Actividad 3</option>
+                        <h2 class="section-heading">Eliminar un actividad</h2>
+                         <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                        <dd><select id="delete_grupo_trabajo" name="grupos_trabajo" onchange="cargarActividades('delete_grupo_trabajo','delete_actividad')">
+                         <option selected="true" disabled="true"> Seleccione una opción...</option>
                         </select></dd>
-                            <input type="button" onclick="EliminarActividad()" value="Eliminar" class="btnDelete">
-                        </div>
+                        <dt><h3>Seleccionar una actividad:</h3></dt>
+                        <dd><select name="actividades" id="delete_actividad">
+                        </select></dd>
+                        <input type="button" onclick="EliminarActividad()" value="Eliminar actividad">
                     </div>
                 </div>
             </div>
         </div>
 
-
+        
     </header>
 </body>
 
