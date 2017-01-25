@@ -95,6 +95,26 @@ include("database.php");
 				echo json_encode($arraylist);    
 				$conn->close();
 				break;
+			case 5:
+				# se traerá a todos las actividades del grupo de trabajo indicado con el id... idactividad, nombre, fecha, lugar, descripcion, rutaImagen, grupoTrabajo_idgrupoTrabajo
+				
+				$arraylist = array();
+				$actividad_id= $_GET['actividad'];
+				$sql="SELECT * FROM actividad where idactividad = $actividad_id;";
+				$result = $conn->query($sql);
+				if ($result->num_rows > 0) {
+				    // output data of each row
+				    
+				    while($row = $result->fetch_assoc()) {
+				    	array_push($arraylist,array("nombre"=>$row["nombre"],"fecha"=>$row["fecha"],"lugar"=>$row["lugar"],"descripcion"=>$row["descripcion"],"rutaImagen"=>$row["rutaImagen"]));
+
+				    }
+
+				}
+				
+				echo json_encode($arraylist);    
+				$conn->close();
+				break;
 
 			default:
 				break;

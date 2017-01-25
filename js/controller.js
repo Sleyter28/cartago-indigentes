@@ -212,3 +212,28 @@ function cargarActividades(id_select,id_select_to_change){
 	
 
 }
+function cargar_edicion_actividad(){
+	var select = document.getElementById("edit_actividad");
+	var id_actividad = select.value;
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	       // Typical action to be performed when the document is ready:
+	      	var json= xhttp.responseText;
+	      	var objs = JSON.parse(json);
+		  	for (var i= 0; i<objs.length; i++) {
+		  		var new_option = document.createElement("option");
+		  		new_option.innerHTML= objs[i]["nombre"];
+				new_option.value=objs[i]["idactividad"];
+				select_to_change.appendChild(new_option);
+				
+		  	}
+	      	
+	    }
+	  
+	};
+	xhttp.open("GET","http://ic-itcr.ac.cr/~gubaldo/proyecto/php/loader.php?id=5&actividad="+id_actividad, true);
+	xhttp.send();
+	
+
+}
