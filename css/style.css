@@ -19,6 +19,7 @@ body, h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     font-weight: 400;
 }
+
 .topnav {
     font-size: 14px;
     position: fixed;
@@ -67,8 +68,8 @@ ul.topnav li.left {
     }
 }
 
-#secA{
-  height: 100%;
+#secA {
+    height: 100%;
 }
 
 .intro-header {
@@ -150,54 +151,54 @@ tr:nth-child(even) {
     padding-left: 3%;
 }
 
-.sector2{
+.sector2 {
     margin-left: 8.33333333%;
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
+
 @media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
+    .container {
+        width: 750px;
+    }
 }
+
 @media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
+    .container {
+        width: 970px;
+    }
 }
+
 @media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+    .container {
+        width: 1170px;
+    }
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .imgQuien {
     float: right;
     width: 41.66666667%;
     margin-left: 13.66666667%;
-
 }
-.col-lg-5{
+
+.col-lg-5 {
     padding: 3%;
 }
-.img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+
+.img-responsive, .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .content-section-a {
@@ -207,7 +208,6 @@ tr:nth-child(even) {
 .content-section-b {
     padding: 50px 0;
 }
-
 
 .content-section-c {
     padding: 40px 0;
@@ -273,6 +273,39 @@ input[type=tel]:focus {
     width: 25%;
 }
 
+input[type=date] {
+    width: 220px;
+    box-sizing: border-box;
+    border: 2px solid #00ccff;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../images/date.png');
+    background-position: 10px 10px;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=tel]:focus {
+    width: 25%;
+}
+
+input[type=file] {
+    width: 270px;
+    box-sizing: border-box;
+    border: 2px solid #00ccff;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    color: #00ccff;
+}
+
 textarea {
     width: 330px;
     box-sizing: border-box;
@@ -293,6 +326,28 @@ textarea:focus {
     width: 55%;
 }
 
+input.goals {
+    background-image: url('../images/goals.png');
+}
+
+input.group{
+  background-image: url('../images/group.png');
+}
+
+input.title{
+  background-image: url('../images/activity.png');
+}
+
+input.place{
+  background-image: url('../images/place.png');
+}
+textarea.resumen{
+  background-image: url('../images/resumen.png');
+}
+textarea.description{
+  background-image: url('../images/desc.png');
+}
+
 form {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -304,4 +359,44 @@ form {
 footer {
     padding: 50px 0;
     background-color: #f8f8f8;
+}
+
+select {
+    width: 250px;
+    box-sizing: border-box;
+    border: 2px solid #00ccff;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    padding: 12px 20px 12px 40px;
+}
+
+.btnAdd {
+    width: 150px;
+    font-size: 16px;
+    background-color: #00ccff;
+    border-radius: 5px;
+    border: 1px white solid;
+    margin-left: 40%;
+}
+
+.btnDelete {
+    width: 150px;
+    font-size: 16px;
+    background-color: #C2185B;
+    border-radius: 5px;
+    border: 1px white solid;
+    margin-left: 40%;
+}
+
+#newAct {
+    margin-left: 7%;
+}
+
+.contenedor {
+    padding: 5%;
+    padding-left: 11%;
+    border-radius: 8px;
+    border: 1px solid #00ccff;
+    background-color: rgba(255, 255, 255, 0.2);
 }

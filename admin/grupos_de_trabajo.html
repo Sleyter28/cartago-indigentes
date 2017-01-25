@@ -43,17 +43,19 @@
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
-                        <h2 class="section-heading">Nuevo grupo de trabajo</h2>
-                        <dt><h3>Nombre:</h3></dt>
-                        <dd><input type="text" name="nombre_grupo_trabajo"></dd>
-                        <dt><h3>Resumen:</h3></dt>
-                        <dd><textarea name="resumen_grupo_trabajo"></textarea></dd> 
-                        <dt><h3>Lista de Objetivos:</h3></dt>
-                        <dd><input type="text" name="objetivo_grupo_trabajo"></dd>
-                        <dd><input type="text" name="objetivo_grupo_trabajo"></dd>
-                        <dd><input type="text" name="objetivo_grupo_trabajo"></dd>
-                        <dd><input type="text" name="objetivo_grupo_trabajo"><input type="button" onclick="agregarObjetivo()" value="Agregar objetivo"></dd>
-                        
+                        <h2 class="section-heading" id="newAct">Nuevo grupo de trabajo</h2>
+                        <div class="contenedor">
+                            <dt><h3>Nombre:</h3></dt>
+                            <dd><input type="text" name="nombre_grupo_trabajo" class="group"></dd>
+                            <dt><h3>Resumen:</h3></dt>
+                            <dd><textarea name="resumen_grupo_trabajo" class="resumen"></textarea></dd>
+                            <dt><h3>Lista de Objetivos:</h3></dt>
+                            <dd><input type="text" name="objetivo_grupo_trabajo" class="goals"></dd><br>
+                            <dd><input type="text" name="objetivo_grupo_trabajo" class="goals"></dd><br>
+                            <dd><input type="text" name="objetivo_grupo_trabajo" class="goals"></dd><br>
+                            <dd><input type="text" name="objetivo_grupo_trabajo" class="goals"></dd><br>
+                            <input type="button" onclick="agregarObjetivo()" value="Agregar" class="btnAdd">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,19 +68,21 @@
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
-                        <h2 class="section-heading">Editar grupo de trabajo</h2>
-                        <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
-                        <dd><select id="grupos_trabajo" name="grupos_trabajo" onchange="cargarInput()">
+                        <h2 class="section-heading" id="newAct">Editar grupo de trabajo</h2>
+                        <div class="contenedor">
+                            <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                            <dd><select id="grupos_trabajo" name="grupos_trabajo" onchange="cargarInput()">
                             <option selected="true" disabled="true"> Seleccione una opción...</option>
                         </select></dd>
-                        <dt><h3>Nombre:</h3></dt>
-                        <dd><input type="text" id="nombre_grupo_trabajo" name="nombre_grupo_trabajo"></dd>
-                        <dt><h3>Resumen:</h3></dt>
-                        <dd><textarea id="resumen_grupo_trabajo" name="resumen_grupo_trabajo"></textarea></dd> 
-                        <dt><h3>Lista de Objetivos:</h3></dt>
-                        <div id="lista_de_objetivos">
+                            <dt><h3>Nombre:</h3></dt>
+                            <dd><input type="text" id="nombre_grupo_trabajo" name="nombre_grupo_trabajo" class="group"></dd>
+                            <dt><h3>Resumen:</h3></dt>
+                            <dd><textarea id="resumen_grupo_trabajo" name="resumen_grupo_trabajo" class="resumen"></textarea></dd>
+                            <dt><h3>Lista de Objetivos:</h3></dt>
+                            <div id="lista_de_objetivos">
+                            </div>
+                            <input type="button" onclick="agregarObjetivo" value="Agregar" class="btnAdd">
                         </div>
-                        <input type="button" onclick="agregarObjetivo" value="Agregar objetivo">
                     </div>
                 </div>
             </div>
@@ -90,20 +94,23 @@
                     <div class="col-lg-5 col-sm-6">
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
-                        <h2 class="section-heading">Eliminar un grupo de trabajo</h2>
-                        <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
-                        <dd><select name="grupos_trabajo">
+                        <h2 class="section-heading" id="newAct">Eliminar un grupo de trabajo</h2>
+                        <div class="contenedor">
+                            <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                            <dd><select name="grupos_trabajo">
                             <option>Grupo 1</option>
                             <option>Grupo 2</option>
                             <option>Grupo 3</option>
                         </select></dd>
-                        <input type="button" onclick="EliminarGrupo()" value="Eliminar grupo de trabajo">
+                            <br>
+                            <input type="button" onclick="EliminarGrupo()" value="Eliminar" class="btnDelete">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        
+
     </header>
 </body>
 
