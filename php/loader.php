@@ -115,6 +115,14 @@ include("database.php");
 				echo json_encode($arraylist);    
 				$conn->close();
 				break;
+			case 6:
+				# se traerá a todos las actividades del grupo de trabajo indicado con el id... idactividad, nombre, fecha, lugar, descripcion, rutaImagen, grupoTrabajo_idgrupoTrabajo
+				
+				$actividad_id= $_GET['actividad'];
+				$sql="DELETE FROM actividad where idactividad = $actividad_id;";
+				$result = $conn->query($sql);
+				$conn->close();
+				break;
 
 			default:
 				break;

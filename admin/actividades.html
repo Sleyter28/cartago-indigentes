@@ -85,13 +85,13 @@
                         <dd><select id="edit_actividad" onchange="cargar_edicion_actividad()">
                         </select></dd>
                         <dt><h3>Título:</h3></dt>
-                        <dd><input type="text" name="titulo_actividad"></dd>
+                        <dd><input type="text" name="titulo_actividad" id="titulo_actividad"></dd>
                         <dt><h3>Fecha:</h3></dt>
-                        <dd><input  type="date" name="fecha_actividad"></input></dd> 
+                        <dd><input  type="date" name="fecha_actividad" id="fecha_actividad"></input></dd> 
                         <dt><h3>Lugar:</h3></dt>
-                        <dd><input type="text" name="lugar_actividad"></dd>
+                        <dd><input type="text" name="lugar_actividad" id="lugar_actividad"></dd>
                         <dt><h3>Descripción:</h3></dt>
-                        <dd><textarea  name="descripcion_actividad"></textarea></dd>
+                        <dd><textarea  name="descripcion_actividad" id="descripcion_actividad"></textarea></dd>
                         <dt><h3>Imagen (cambiar):</h3></dt>
                         <dd><input type="file" name="imagen"></dd>
                         <input type="button" onclick="editarActividad()">                        
@@ -114,8 +114,9 @@
                         </select></dd>
                         <dt><h3>Seleccionar una actividad:</h3></dt>
                         <dd><select name="actividades" id="delete_actividad">
+                        <option selected="true" disabled="true"> Seleccione una opción...</option>
                         </select></dd>
-                        <input type="button" onclick="EliminarActividad()" value="Eliminar actividad">
+                        <input type="button" onclick="delete_actividad()" value="Eliminar actividad">
                     </div>
                 </div>
             </div>

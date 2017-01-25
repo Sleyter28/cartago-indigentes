@@ -221,12 +221,15 @@ function cargar_edicion_actividad(){
 	       // Typical action to be performed when the document is ready:
 	      	var json= xhttp.responseText;
 	      	var objs = JSON.parse(json);
+	      	var titulo_actividad = document.getElementById("titulo_actividad");
+			var fecha_actividad = document.getElementById("fecha_actividad");
+			var lugar_actividad = document.getElementById("lugar_actividad");
+			var descripcion_actividad = document.getElementById("descripcion_actividad");
 		  	for (var i= 0; i<objs.length; i++) {
-		  		var new_option = document.createElement("option");
-		  		new_option.innerHTML= objs[i]["nombre"];
-				new_option.value=objs[i]["idactividad"];
-				select_to_change.appendChild(new_option);
-				
+		  		titulo_actividad.value=objs[i]["nombre"];
+				fecha_actividad.value=objs[i]["fecha"];
+				lugar_actividad.value=objs[i]["lugar"];
+				descripcion_actividad.value=objs[i]["descripcion"];
 		  	}
 	      	
 	    }
@@ -236,4 +239,22 @@ function cargar_edicion_actividad(){
 	xhttp.send();
 	
 
+}
+
+function delete_actividad(){
+	var select = document.getElementById("delete_actividad");
+	var id_actividad = select.value;
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	       // Typical action to be performed when the document is ready:
+	      	alert("actividad eliminada correctamente");
+	      	select.remove(select.selectedIndex);
+	      	select.selectedIndex="0";
+	    }
+	  
+	};
+	xhttp.open("GET","http://ic-itcr.ac.cr/~gubaldo/proyecto/php/loader.php?id=6&actividad="+id_actividad, true);
+	xhttp.send();
+	
 }
