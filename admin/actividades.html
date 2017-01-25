@@ -7,9 +7,10 @@
     <title>Actividades</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet prefetch" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <script type="text/javascript" src="http://ic-itcr.ac.cr/~gubaldo/proyecto/js/controller.js"></script>
 </head>
 
-<body>
+<body onload="cargar()">
     <header>
         <nav class="navbar">
             <div class="nav-header">
@@ -44,6 +45,13 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <h2 class="section-heading">Nueva actividad</h2>
+                        <dt><h3>Selecione el grupo que realizará la actividad:</h3></dt>
+                        <dd><select>
+                            <option>Grupo</option>
+                            <option>Grupo</option>
+                            <option>Grupo</option>
+                            <option>Grupo</option>
+                        </select></dd>
                         <dt><h3>Título:</h3></dt>
                         <dd><input type="text" name="titulo_actividad"></dd>
                         <dt><h3>Fecha:</h3></dt>
@@ -68,8 +76,13 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <h2 class="section-heading">Editar actividad</h2>
+                        <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                        <dd><select id="grupos_trabajo" name="grupos_trabajo" onchange="cargarActividades('grupos_trabajo','edit_actividad')">
+                            <option selected="true" disabled="true"> Seleccione una opción...</option>
+                        </select></dd>
+                        
                         <dt><h3>Selecione una actividad:</h3></dt>
-                        <dd><select>
+                        <dd><select id="edit_actividad">
                             <option>Actividad</option>
                             <option>Actividad</option>
                             <option>Actividad</option>
@@ -99,8 +112,12 @@
                         <hr class="section-heading-spacer">
                         <div class="clearfix"></div>
                         <h2 class="section-heading">Eliminar un actividad</h2>
+                         <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
+                        <dd><select id="delete_grupo_trabajo" name="grupos_trabajo" onchange="cargarActividades('delete_grupo_trabajo','delete_actividad')">
+                         <option selected="true" disabled="true"> Seleccione una opción...</option>
+                        </select></dd>
                         <dt><h3>Seleccionar una actividad:</h3></dt>
-                        <dd><select name="grupos_trabajo">
+                        <dd><select name="actividades" id="delete_actividad">
                             <option>Actividad 1</option>
                             <option>Actividad 2</option>
                             <option>Actividad 3</option>

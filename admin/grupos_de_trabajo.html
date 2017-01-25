@@ -78,7 +78,8 @@
                         <dt><h3>Lista de Objetivos:</h3></dt>
                         <div id="lista_de_objetivos">
                         </div>
-                        <input type="button" onclick="agregarObjetivo" value="Agregar objetivo">
+                        <input type="button" onclick="agregarObjetivo()" value="Agregar objetivo">
+                        <input type="button" onclick="GuardarCambios()" value="Guardar Cambios">
                     </div>
                 </div>
             </div>
@@ -92,10 +93,8 @@
                         <div class="clearfix"></div>
                         <h2 class="section-heading">Eliminar un grupo de trabajo</h2>
                         <dt><h3>Seleccionar un grupo de trabajo:</h3></dt>
-                        <dd><select name="grupos_trabajo">
-                            <option>Grupo 1</option>
-                            <option>Grupo 2</option>
-                            <option>Grupo 3</option>
+                        <dd><select id="delete_grupo_trabajo" name="grupos_trabajo">
+                         <option selected="true" disabled="true"> Seleccione una opción...</option>
                         </select></dd>
                         <input type="button" onclick="EliminarGrupo()" value="Eliminar grupo de trabajo">
                     </div>
